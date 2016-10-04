@@ -1,0 +1,28 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.util.converter.DateStringConverter?>
+<?import javafx.util.converter.LocalDateStringConverter?>
+<DialogPane fx:controller="com.sokolovdp.todolist.DialogController"
+            xmlns:fx="http://javafx.com/fxml">
+    <headerText>
+        We could put instructions here
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Short description: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="shortX" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Details: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextArea fx:id="detailsX" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                      wrapText="true"/>
+            <Label text="Due to: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="dateX" GridPane.rowIndex="2" GridPane.columnIndex="1">
+                <converter>
+
+                </converter>
+            </DatePicker>
+
+        </GridPane>
+    </content>
+
+</DialogPane>
